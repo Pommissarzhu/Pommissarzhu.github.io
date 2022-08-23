@@ -19,27 +19,27 @@
     <meta name="description" content="1. 概述Python 中的集合，和数学中的集合概念一样，用来保存不重复的元素，即集合中的元素都是唯一的，互不相同。 从形式上看，和字典类似，Python 集合会将所有元素放在一对大括号&amp;#123;&amp;#125;中，相邻元素之间用,分隔，如下所示。其中，elementi表示集合中的元素，个数没有限制。 1&amp;#123;element1, element2, ..., elementn&amp;#125;  1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python中特殊的数据类型之集合set">
-<meta property="og:url" content="http://example.com/2022/07/07/python-set/index.html">
+<meta property="og:url" content="https://pommissarzhu.github.io/2022/07/07/python-set/index.html">
 <meta property="og:site_name" content="Pommissarzhu&#39;s blog">
 <meta property="og:description" content="1. 概述Python 中的集合，和数学中的集合概念一样，用来保存不重复的元素，即集合中的元素都是唯一的，互不相同。 从形式上看，和字典类似，Python 集合会将所有元素放在一对大括号&amp;#123;&amp;#125;中，相邻元素之间用,分隔，如下所示。其中，elementi表示集合中的元素，个数没有限制。 1&amp;#123;element1, element2, ..., elementn&amp;#125;  1">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/pics/set-create-1.png">
-<meta property="og:image" content="http://example.com/pics/set-create-2.png">
-<meta property="og:image" content="http://example.com/pics/set-create-3.png">
-<meta property="og:image" content="http://example.com/pics/set-create-4.png">
-<meta property="og:image" content="http://example.com/pics/set-delete-1.png">
-<meta property="og:image" content="http://example.com/pics/set-view-1.png">
-<meta property="og:image" content="http://example.com/pics/set-add-1.png">
-<meta property="og:image" content="http://example.com/pics/set-remove-1.png">
-<meta property="og:image" content="http://example.com/pics/set-discard-1.png">
-<meta property="og:image" content="http://example.com/pics/set-calc-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-create-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-create-2.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-create-3.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-create-4.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-delete-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-view-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-add-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-remove-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-discard-1.png">
+<meta property="og:image" content="https://pommissarzhu.github.io/pics/set-calc-1.png">
 <meta property="article:published_time" content="2022-07-07T04:00:00.000Z">
 <meta property="article:modified_time" content="2022-08-22T11:26:04.398Z">
 <meta property="article:author" content="Pommissarzhu">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="NLP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/pics/set-create-1.png">
+<meta name="twitter:image" content="https://pommissarzhu.github.io/pics/set-create-1.png">
   
   
   
@@ -81,7 +81,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"pommissarzhu.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -536,7 +536,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Python中特殊的数据类型之集合set</div>
-      <div>http://example.com/2022/07/07/python-set/</div>
+      <div>https://pommissarzhu.github.io/2022/07/07/python-set/</div>
     </div>
     <div class="license-meta">
       
